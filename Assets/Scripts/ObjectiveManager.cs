@@ -1,7 +1,8 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectiveManager : MonoBehavior
+public class ObjectiveManager : MonoBehaviour
 {
 	public List<Objective> objectives;
 	

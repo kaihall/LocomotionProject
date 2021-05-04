@@ -1,8 +1,9 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 // Tracks whether all of the stone stacks have been completed
-public class StoneStackObjectiveManager : MonoBehavior
+public class StoneStackObjectiveManager : MonoBehaviour
 {
 	public List<StoneStack> stoneStacks;
 	internal Objective stoneStackObj;
@@ -20,6 +21,8 @@ public class StoneStackObjectiveManager : MonoBehavior
 				if (stack.stackSize >= 5 && !stack.objective.cleared) {
 					// Clear the objective
 					stack.objective.ClearObjective();
+					// Display the completion message
+					stack.message.FadeIn();
 				}
 				// If the objective has been cleared...
 				if (stack.objective.cleared) {

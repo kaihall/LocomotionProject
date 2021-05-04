@@ -1,7 +1,8 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Objective : MonoBehavior
+public class Objective : MonoBehaviour
 {
 	internal ObjectiveManager objectiveManager;
 	internal bool cleared = false;

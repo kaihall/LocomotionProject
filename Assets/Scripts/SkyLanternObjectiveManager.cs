@@ -1,7 +1,8 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class SkyLanternObjectiveManager : MonoBehavior
+public class SkyLanternObjectiveManager : MonoBehaviour
 {
 	public List<SkyLantern> lanterns;
 	internal Objective lanternObj;
@@ -23,7 +24,7 @@ public class SkyLanternObjectiveManager : MonoBehavior
 			}
 			
 			// Update the objective text to show how many lanterns have been released
-			lanternObj.objectiveText = "Release Floating Lanterns (" + cleared.ToString() + "/" + stoneStacks.Count.ToString() + ")";
+			lanternObj.objectiveText = "Release Floating Lanterns (" + cleared.ToString() + "/" + lanterns.Count.ToString() + ")";
 			
 			// If all of the stone stacks are finished...
 			if (cleared >= lanterns.Count) {
